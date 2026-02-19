@@ -1,5 +1,8 @@
 package com.narxoz.rpg;
 
+import com.narxoz.rpg.combat.Ability;
+import com.narxoz.rpg.combat.FireballAbility;
+
 /**
  * Main demonstration class for the RPG Enemy System.
  *
@@ -183,6 +186,11 @@ public class Main {
         // System.out.println("Prototype: Efficient template cloning with deep copy");
 
         System.out.println("\n=== Demo Complete ===");
+
+        Ability a1 = new FireballAbility();
+        Ability a2 = a1.clone();
+
+        System.out.println(a1 == a2);
     }
 
     // TODO: Add helper methods as needed
@@ -190,4 +198,6 @@ public class Main {
     // - displayEnemyDetails(Enemy enemy)
     // - demonstrateDeepCopy(Enemy original, Enemy clone)
     // - createThemeDemo(EnemyComponentFactory factory, String themeName)
+
+    
 }
